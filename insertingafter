@@ -1,0 +1,18 @@
+void insertafter(int v,int va)
+{
+ struct node *newnode,*temp,*preptr;
+ newnode=(struct node*)malloc(sizeof(struct node));
+ newnode->data=va;
+ temp=head;
+ preptr=temp;
+  while(temp->data!=v)
+  {
+   preptr=temp;
+   temp=temp->next;
+  }
+  preptr=preptr->next;
+  temp=temp->next;
+  preptr->next=newnode;
+  //temp->next=newnode;
+  newnode->next=temp;
+}
