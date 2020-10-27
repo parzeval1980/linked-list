@@ -1,0 +1,23 @@
+void InsertNode(int pos_cha, int newdata)
+{
+    struct Node* temp = (struct Node* )malloc(sizeof(struct Node* ));
+    temp->data=newdata;    
+
+    struct Node* temp2=head;
+    
+    if(pos_cha==1)
+    {
+        temp->next=temp2;
+        head=temp;
+        return ;
+    }
+        
+    for(int i=1;i<pos_cha;i++)
+    {
+        temp2=temp2->next;
+    }
+
+    temp->next=temp2->next;
+    temp2->next=temp;
+    return;
+}
