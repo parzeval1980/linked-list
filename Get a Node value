@@ -1,0 +1,17 @@
+int GetNodeValue(int x, int v)
+{
+	struct Node* current = head;
+	int count = 0;
+
+	while(current!=NULL)
+	{
+		if(count == v)
+		{	return(current->data);
+			printf("%d\n", current->data);
+		}
+
+		count++;
+		current = current->next;
+	}
+	assert(0);
+}
